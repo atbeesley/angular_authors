@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthorsService } from './author/authors.service';
+
 
 @Component({
     selector: 'authors', 
@@ -10,7 +12,7 @@ import { Component } from '@angular/core';
 </ul>`
 })
 
-export class AuthorsComponent {
+export class AuthorsComponent implements OnInit {
     title = "List of Authors";
     authors; 
 
