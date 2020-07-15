@@ -4,7 +4,7 @@ import { AuthorsService } from './author/authors.service';
 
 @Component({
     selector: 'authors', 
-    template: `<h2>{{ title }}</h2>
+    template: `<h2>There are {{ authors.length }} {{ title }}.</h2>
     <ul>
     <li *ngFor="let author of authors">
         {{ author }}
@@ -13,7 +13,7 @@ import { AuthorsService } from './author/authors.service';
 })
 
 export class AuthorsComponent implements OnInit {
-    title = "List of Authors";
+    title = "authors";
     authors; 
 
     constructor(){
